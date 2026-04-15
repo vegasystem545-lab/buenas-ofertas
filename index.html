@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buenas Ofertas - Pedidos</title>
+    <style>
+        :root {
+            --primario: #84cc16;
+            --oscuro: #0f172a;
+            --blanco: #ffffff;
+        }
+        body { font-family: sans-serif; background-color: #f1f5f9; padding: 20px; display: flex; justify-content: center; }
+        .card { background: var(--blanco); padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%; max-width: 450px; }
+        h1 { color: var(--oscuro); text-align: center; margin-bottom: 5px; }
+        .sub { text-align: center; color: #64748b; margin-bottom: 20px; font-size: 0.9em; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; }
+        .resumen { background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 20px; border-left: 4px solid var(--primario); }
+        .total-row { display: flex; justify-content: space-between; font-weight: bold; margin-top: 10px; font-size: 1.1em; border-top: 1px solid #ddd; padding-top: 10px; }
+        button { width: 100%; background: var(--primario); color: var(--oscuro); border: none; padding: 15px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Buenas Ofertas</h1>
+        <p class="sub">Logística directa a tu hogar</p>
+        <form id="orderForm">
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" id="nombre" required placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+                <label>Dirección</label>
+                <input type="text" id="direccion" required placeholder="Calle y número">
+            </div>
+            <div class="form-group">
+                <label>Producto</label>
+                <select id="producto" onchange="updateTotal()">
+                    <option value="8500">Jabón Líquido 5L - $8.500</option>
+                    <option value="4200">Lavandina 5L - $4.200</option>
+                    <option value="5800">Suavizante 5L - $5.800</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Zona de Envío</label>
+                <select id="zona" onchange="updateTotal()">
+                    <option value="1500">Zona 1 (Hasta 5km) - $1.500</option>
+                    <option value="2500" selected>Zona 2 (5 a 12km) - $2.500</option>
+                    <option value="4500">Zona 3 (+12km) - $4.500</option>
+                </select>
+            </div>
+            <div class="resumen">
+                <div style="display:flex; justify-content:space-between">
+                    <span>Envío:</span>
+                    <span id="envio-val">$2.500</span>
+                </div>
+                <div class="total-row">
+                    <span>TOTAL:</span>
+                    <span id="total-val">$11.000</span>
+                </div>
+            </div>
+            <button type="submit">CONFIRMAR PEDIDO</button>
+        </form>
+    </div>
+
+    <script>
+        function updateTotal() {
+            const p = parseInt(document.getElementById('producto').value);
+            const z = parseInt(document.getElementById('zona').value);
+            document.getElementById('envio-val').innerText = '$' + z.toLocaleString();
+            document.getElementById('total-val').innerText = '$' + (p + z).toLocaleString();
+        }
+        document.getElementById('orderForm').onsubmit = (e) => {
+            e.preventDefault();
+            alert("¡Pedido registrado! Pronto nos comunicaremos.");
+        };
+    </script>
+</body>
+</html>
