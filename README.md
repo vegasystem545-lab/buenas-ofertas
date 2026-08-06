@@ -16,3 +16,7 @@ www.buenasofertas.online
 ## Estado
 
 En construcción 🚧
+## Laboratorios
+
+- PC Taller (principal)
+- Laptop Lenovo (secundaria)
