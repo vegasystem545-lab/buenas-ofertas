@@ -1,57 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="css/estilos.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buenas Ofertas - Pedidos</title>
-    <style>
-            </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buenas Ofertas — Muy pronto</title>
+<link rel="stylesheet" href="css/estilos.css">
 </head>
-
-<body>
-    <div class="card">
-        <h1>Buenas Ofertas</h1>
-        <p class="sub">Logística directa a tu hogar</p>
-        <form id="orderForm">
-            <div class="form-group">
-                <label>Nombre</label>
-                <input type="text" id="nombre" required placeholder="Tu nombre">
-            </div>
-            <div class="form-group">
-                <label>Dirección</label>
-                <input type="text" id="direccion" required placeholder="Calle y número">
-            </div>
-            <div class="form-group">
-                <label>Producto</label>
-                <select id="producto" onchange="updateTotal()">
-                    <option value="8500">Jabón Líquido 5L - $8.500</option>
-                    <option value="4200">Lavandina 5L - $4.200</option>
-                    <option value="5800">Suavizante 5L - $5.800</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Zona de Envío</label>
-                <select id="zona" onchange="updateTotal()">
-                    <option value="1500">Zona 1 (Hasta 5km) - $1.500</option>
-                    <option value="2500" selected>Zona 2 (5 a 12km) - $2.500</option>
-                    <option value="4500">Zona 3 (+12km) - $4.500</option>
-                </select>
-            </div>
-            <div class="resumen">
-                <div style="display:flex; justify-content:space-between">
-                    <span>Envío:</span>
-                    <span id="envio-val">$2.500</span>
-                </div>
-                <div class="total-row">
-                    <span>TOTAL:</span>
-                    <span id="total-val">$11.000</span>
-                </div>
-            </div>
-            <button type="submit">CONFIRMAR PEDIDO</button>
-        </form>
-    </div>
-      <script 
-      src="js/script.js"></script>  
+<body class="entrada">
+  <main class="entrada-contenedor">
+    <div class="entrada-logo"></div>
+    <h1 class="entrada-titulo">BUENAS OFERTAS</h1>
+    <p class="entrada-leyenda">Algo nuevo está llegando...</p>
+    <p class="entrada-pronto">MUY PRONTO</p>
+    <a class="entrada-acceso" href="pedidos.html">Hacer un pedido ahora →</a>
+  </main>
 </body>
 </html>

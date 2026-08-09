@@ -16,3 +16,36 @@
         .resumen { background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 20px; border-left: 4px solid var(--primario); }
         .total-row { display: flex; justify-content: space-between; font-weight: bold; margin-top: 10px; font-size: 1.1em; border-top: 1px solid #ddd; padding-top: 10px; }
         button { width: 100%; background: var(--primario); color: var(--oscuro); border: none; padding: 15px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 20px; }
+/* ===== Página de entrada (teaser) ===== */
+body.entrada {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--blanco);
+}
+.entrada-contenedor { text-align: center; }
+.entrada-logo {
+  width: 70px; height: 70px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: var(--primario);
+  animation: latido 2s infinite;
+}
+.entrada-titulo { letter-spacing: 4px; }
+.entrada-leyenda { color: #999; font-style: italic; }
+.entrada-pronto {
+  letter-spacing: 6px;
+  color: var(--primario);
+  font-weight: bold;
+}
+.entrada-acceso {
+  display: inline-block;
+  margin-top: 30px;
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.85em;
+}
+@keyframes latido {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50%     { transform: scale(1.08); opacity: .85; }
+}
