@@ -1,30 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="css/estilos.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buenas Ofertas - Pedidos</title>
     <style>
-        :root {
-            --primario: #7dde5a;
-            --secundario: #7DDE5A;
-            --complementario: #8B5CF6;
-            --destaque: #FFD54A;
-            --oscuro: #333333;
-            --blanco: #ffffff;
-        }
-        body { font-family: sans-serif; background-color: #f1f5f9; padding: 20px; display: flex; justify-content: center; }
-        .card { background: var(--blanco); padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%; max-width: 450px; }
-        h1 { color: var(--oscuro); text-align: center; margin-bottom: 5px; }
-        .sub { text-align: center; color: #64748b; margin-bottom: 20px; font-size: 0.9em; }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input, select { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; }
-        .resumen { background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 20px; border-left: 4px solid var(--primario); }
-        .total-row { display: flex; justify-content: space-between; font-weight: bold; margin-top: 10px; font-size: 1.1em; border-top: 1px solid #ddd; padding-top: 10px; }
-        button { width: 100%; background: var(--primario); color: var(--oscuro); border: none; padding: 15px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 20px; }
-    </style>
+            </style>
 </head>
+
 <body>
     <div class="card">
         <h1>Buenas Ofertas</h1>
@@ -67,18 +51,7 @@
             <button type="submit">CONFIRMAR PEDIDO</button>
         </form>
     </div>
-
-    <script>
-        function updateTotal() {
-            const p = parseInt(document.getElementById('producto').value);
-            const z = parseInt(document.getElementById('zona').value);
-            document.getElementById('envio-val').innerText = '$' + z.toLocaleString();
-            document.getElementById('total-val').innerText = '$' + (p + z).toLocaleString();
-        }
-        document.getElementById('orderForm').onsubmit = (e) => {
-            e.preventDefault();
-            alert("¡Pedido registrado! Pronto nos comunicaremos.");
-        };
-    </script>
+      <script 
+      src="js/script.js"></script>  
 </body>
 </html>
