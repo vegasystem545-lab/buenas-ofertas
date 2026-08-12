@@ -16,35 +16,33 @@
         .resumen { background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 20px; border-left: 4px solid var(--primario); }
         .total-row { display: flex; justify-content: space-between; font-weight: bold; margin-top: 10px; font-size: 1.1em; border-top: 1px solid #ddd; padding-top: 10px; }
         button { width: 100%; background: var(--primario); color: var(--oscuro); border: none; padding: 15px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 20px; }
-/* ===== Página de entrada (teaser) ===== */
+//* ===== Página de entrada (teaser) ===== */
 body.entrada {
-  align-items: center;
-  justify-content: center;
+  display: flex;
   min-height: 100vh;
   background: var(--blanco);
 }
-.entrada-contenedor { text-align: center; }
-.entrada-titulo { letter-spacing: 4px; }
-.entrada-leyenda { color: #7DDE5A; font-style: italic; }
-.entrada-pronto {
-  letter-spacing: 6px;
-  color: #FF7A00 ;
-  font-weight: bold;
+.entrada-contenedor {
+  margin: auto;               /* centra SIN cortar en móviles */
+  text-align: center;
+  padding: 24px 16px;
 }
-.entrada-acceso {
-  display: inline-block;
-  margin-top: 30px;
-  color: #bbb;
-  text-decoration: none;
-  font-size: 0.85em;
-
 .entrada-imagen {
   display: block;
-  width: min(320px, 80%);
-  margin: 0 auto 24px;
+  width: auto;
+  height: auto;
+  max-width: min(320px, 85vw);  /* tope por ancho */
+  max-height: 60vh;             /* tope por altura de pantalla */
+  margin: 0 auto 20px;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   animation: aparecer 1.2s ease both;
+}
+.entrada-leyenda { color: #999; font-style: italic; }
+.entrada-pronto {
+  letter-spacing: 6px;
+  color: var(--primario);
+  font-weight: bold;
 }
 @keyframes aparecer {
   from { opacity: 0; transform: translateY(12px); }
