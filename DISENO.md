@@ -31,3 +31,10 @@ Quien entra a Buenas Ofertas quiere hacer solo cuatro cosas:
 | Diseño limpio | Apple |
 | Colores y promociones | Tiendas de artículos para el hogar |
 | Adaptación al móvil | Aplicaciones modernas |
+
+## Tipografía
+
+- Familia: JetBrains Mono (monoespaciada, estética terminal)
+- Pesos: 300 (cuerpo), 400 y 700 (énfasis)
+- Fallback: ui-monospace, 'Courier New', monospace
+- Carga: Google Fonts vía @import en estilos.css
